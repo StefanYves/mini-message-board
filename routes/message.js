@@ -8,8 +8,6 @@ messageRouter.get("/:user", (req, res) => {
   const messageUser = req.params.user;
   const message = messages.find((msg) => msg.user === messageUser);
 
-  console.log(messages);
-
   if (message) {
     res.render("message", {
       user: message.user,
