@@ -8,17 +8,19 @@
   <body>
     <div class="container">
       <ul>
-        <% messages.forEach((message)=> { %>
+        <% if (messages.length > 0) { %> <% messages.forEach((message) => { %>
         <li>
-          <p><strong><%= message.user %></strong></p>
-          <p><%= message.text %></p>
-          <p><small><%= message.added.toLocaleString() %></small></p>
-          <a href="/messages/<%= message.user %>" class="button">Open</a>
+          <p><strong><%= message.username %></strong></p>
+          <p><%= message.content %></p>
+          <p><small><%= new Date(message.added).toLocaleString() %></small></p>
+          <a href="/messages/<%= message.id %>" class="button">Open</a>
         </li>
-        <% }) %>
+        <% }) %> <% } else { %>
+        <li>No messages found.</li>
+        <% } %>
       </ul>
       <a href="/new" class="button">Add a new message</a>
     </div>
   </body>
-  <footer><%- include ("./footer"); -%></footer>
+  <footer><%- include("./footer"); -%></footer>
 </html>
