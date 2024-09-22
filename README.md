@@ -2,7 +2,7 @@
 A web application where users can write and view messages. This simple message board allows users to enter their messages, which are then visible to all other users.
 
 
-Link to project: https://minimessageboard-top.adaptable.app
+Link to project: https://mini-message-board-rg0v.onrender.com
 
 # How It's Made:
 Tech used: Node.js, Express, PostgreSQL, express-validator
